@@ -20,14 +20,14 @@ t3 = st.toggle('DataFrame Completo', value=0)
 #Leitura do Banco para o DataFrame
 engine = sqa.create_engine("sqlite:///dflol.db", echo=True)
 conn = engine.connect()
-dados = pd.read_csv('../1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
+dados = pd.read_csv('1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
 df = pd.DataFrame(dados)
 
 #Código dos gráficos
 if t:
     vi = st.sidebar.checkbox("Visualizar o DataFrame Completo")
     if vi:
-        dfbd = pd.read_csv('../1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
+        dfbd = pd.read_csv('1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
         st.dataframe(dfbd,hide_index=1)
 
     dfnome = df['Nome']
@@ -69,7 +69,7 @@ if t:
 elif t2:
     vi = st.sidebar.checkbox("Visualizar o DataFrame Completo")
     if vi:
-        dfbd = pd.read_csv('../1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
+        dfbd = pd.read_csv('1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
         st.dataframe(dfbd,hide_index=1)
 
     st.sidebar.header('Escolha um campeão:')
@@ -81,5 +81,5 @@ elif t2:
     st.dataframe(df2, hide_index=1)
 #Código do DataFrame Completo  
 elif t3:
-    dfbd = pd.read_csv('../1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
+    dfbd = pd.read_csv('1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
     st.dataframe(dfbd,hide_index=1)
