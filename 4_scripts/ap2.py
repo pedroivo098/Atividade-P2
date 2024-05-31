@@ -81,10 +81,5 @@ elif t2:
     st.dataframe(df2, hide_index=1)
 #Código do DataFrame Completo  
 elif t3:
-<<<<<<< HEAD
     dfbd = pd.read_csv('../1_bases_tratadas/dados_tratados_atividade.csv',sep=';')
     st.dataframe(dfbd,hide_index=1)
-=======
-    dfbd = pd.read_sql('dflol.db', con=conn)
-    st.dataframe(dfbd,hide_index=1)
->>>>>>> 519dedcea36a39df6432bae7a77ef722ac86ef3a
